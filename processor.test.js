@@ -26,4 +26,9 @@ describe("transmission processor", function () {
         let result = processor("9701::<489584872710>");
         expect(result.rawData).not.toEqual(undefined);
     })
+
+    test(" rawData returns -1 if does not start with < or end with >", function() {
+        let result = processor("9701::489584872710>");
+        expect(result.rawData).toEqual(-1);
+    })
 });

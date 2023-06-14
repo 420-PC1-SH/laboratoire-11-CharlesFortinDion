@@ -4,9 +4,10 @@ function processor(transmission) {
         return -1;
     }
     let parts = transmission.split("::");
+    let rawData = parts[1];
     return {
         id: Number(parts[0]),
-        rawData: {}
+        rawData: rawData
     };
 }
 
